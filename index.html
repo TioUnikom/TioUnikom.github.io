@@ -1,0 +1,56 @@
+<html>
+<head>
+	<meta name="viewpoint" content="width=device-width, initial-scale=1">
+	<title>W3 Animate</title>
+	<link type="text/css" rel="stylesheet" href="css/w3.css">
+</head>
+<body>
+	<div class="w3-container" style="background-image: url(images/header.png); background-size: cover; background-position: center; height: 250px;">
+	</div>
+	
+	<div class="w3-bar w3-orange">
+		<button class="w3-bar-item w3-button" onclick="openMenu('Home')">Home</button>
+		<button class="w3-bar-item w3-button" onclick="openMenu('Hobby')">Hobby</button>
+		<button class="w3-bar-item w3-button" onclick="openMenu('Kegiatan')">Kegiatan</button>
+		<button class="w3-bar-item w3-button" onclick="openMenu('Foto')">Foto</button>
+	</div>
+	
+	<div id="Home" class="w3-container w3-animate-fading menu" style="display:none">
+		<h2>Home</h2>
+		<p>Halo Welcome To My Home Website</p>
+		<img src="images/home.png">
+	</div>
+
+	<div id="Hobby" class="w3-container w3-animate-bottom menu" style="display:none">
+		<h2>Hobby</h2>
+		<p>Halo Hobi saya adalah bermain dan membuat game.</p>
+		<img src="images/game-making.jpg">
+	</div>
+
+	<div id="Kegiatan" class="w3-container w3-animate-top menu" style="display:none">
+		<h2>Kegiatan</h2>
+		<p>Halo Kegiatan Saya sekarang adalah mengoding website</p>
+		<img src="images/programming.jpg">
+	</div>
+
+	<div id="Foto" class="w3-container w3-animate-zoom menu" style="display:none">
+		<h2>Foto</h2>
+		<p>Berikut Foto Yang Digunakan pada Website Ini</p>
+		<img src="images/game-making.jpg">
+		<img src="images/programming.jpg">
+		<img src="images/home.png">
+	</div>
+
+</body>
+
+<script>
+	function openMenu(namaMenu) {
+		var i;
+		var x = document.getElementsByClassName("menu");
+		for (i = 0; i < x.length; i++) {
+		x[i].style.display = "none"; 
+		}
+		document.getElementById(namaMenu).style.display = "block"; 
+	}
+</script>
+</html>
